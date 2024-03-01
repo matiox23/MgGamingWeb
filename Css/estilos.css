@@ -1,0 +1,491 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.5s  ;
+  
+}
+
+.div-c{
+
+  margin: 0 30%; /* Reducción del espacio externo */ 
+}
+
+
+.div-sub{
+  
+  display: grid;
+  background-color: red;
+  place-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: solid black;
+  width: 50%;
+  margin: 0 auto;  
+  margin-top: 15px;
+ 
+}
+
+.item{
+  border-radius: 10px;
+  
+}
+
+
+.item:hover{
+  box-shadow:  0 10px 20px rgb(0, 0, 0.20);
+}
+
+.interior{
+  max-width: 100%;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.item figure{
+  overflow: hidden;
+}
+
+.item:hover img { 
+  transform: scale(1.2);
+}
+
+.container-items{
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  place-items: center;
+  overflow: hidden;
+
+}
+
+.info-producto{
+  padding: 15px 30px;
+  line-height: 2;/*Internileado*/
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.price{
+  font-size: 18px;/*Tamaño de la fuente*/
+  font-weight: 900/*Grosor*/;
+}
+
+.info-producto button{
+  border: none;
+  background: none;
+  background-color: black;
+  color: white;
+  padding: 15px 10px;
+  cursor: pointer;
+
+}
+
+.item img {
+  
+  /*width: 100%;*/
+  object-fit: cover;/*cubre todo el contenedor para que la img no se desbore*/
+  border-radius: 10px 10px 0 0;
+  transition: all .5s;
+ 
+}
+
+.p-c{
+  color: #ffffff;
+  text-align: center;
+  font-size: large;
+  display: flex;
+  text-align: justify;
+
+  
+}
+
+.logo{
+  float: left;
+  padding: 5px 20px 0;
+}
+
+.logo img {
+ width: 4rem;
+}
+.logo img:hover{
+  transform: scale(1.1);
+}
+.navegacion{
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+  z-index: 1000;
+}
+.navegacion ul{
+  list-style: none;
+  padding: 0 10px;
+}
+
+.navegacion ul li{
+  display: inline-block;
+  position: relative;
+  transition: .3s linear;
+  z-index: 1000;
+}
+
+.navegacion ul li:hover{
+  transform: scale(1.1);
+}
+
+.navegacion ul li a{
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 20px;
+  transition: .3s linear;
+}
+
+.navegacion ul li a:hover{
+  color: rgba(255, 0, 0, 0.664);
+  transform: scale(1.1);
+}
+
+.navegacion ul li:hover .hijos{
+  display: block;
+}
+.navegacion .submenu .hijos{
+  display: none;
+  background: #0b132b;
+  position: absolute;
+  width: 100%;
+}
+.navegacion .submenu .hijos li{
+  display: block;
+  overflow: hidden;
+  border-bottom: none;
+}
+
+.navegacion .submenu .hijos li a{
+  display: block;
+  
+}
+
+
+/*body{
+  /*background-image: linear-gradient(
+    to bottom right, #403f44, #1e1b32
+  );*/
+
+.img-card{
+  display: flex;
+  margin: 0 auto; /* Centra el elemento horizontalmente */
+  border:#212529 solid;
+  border-radius: 50px;
+  max-width: 100%;
+  transform: scale(1.0);
+  overflow: hidden;/* OCulta el contendio que sale de la caja */
+  transition: all .5s;
+  object-fit: cover;/*cubre todo el contenedor para que la img no se desbore*/
+  transition: all .5s;
+  
+ 
+}
+
+.a-card{
+  background-color: #212529;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 1rem 0;
+  width: 200px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 50px;
+  justify-content: flex-start;
+
+}
+
+
+.h2-c{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  color: #ffffff;
+  
+}
+img {
+  width: 300px;
+  margin:5px;
+  flex-grow: 1;
+  flex-basis: 200;
+  
+ 
+ 
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+
+
+
+}
+
+
+.cards{
+ width: 300px;
+ height: 300px;
+ background-color: transparent;
+ margin: 5px;
+ flex-grow: 1;
+ flex-basis: 200;
+ margin-bottom: 90PX;
+ transition: all .5s;
+ 
+
+}
+
+img:hover{
+  box-shadow:  0 10px 20px rgb(0, 0, 0.20);
+  transform: scale(1.1);
+  
+}
+section {
+  display: flex;
+  width: 800px;
+  flex-wrap: wrap;
+  margin: 0 auto; /* Centra el elemento horizontalmente */
+}
+
+section img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8.5;
+  transition: .5s ease;
+  
+}
+
+section img:hover {
+  cursor:auto;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+
+}
+.slider{
+  
+  width: 300px;
+  position: relative;
+
+}
+
+header{
+
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #0b132b;
+    
+}
+
+.carrusel{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.elemento{
+  flex: 1 0 auto;
+  margin: 0 50px;
+  background-color: red;
+  width: 500px;
+  height: 500px;
+}
+
+.container--hero{
+    padding: 0;
+    margin-right: 200px;
+}
+
+.nav__logo{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #3a506b;
+    width: 100%;
+    position: absolute;
+
+}
+
+footer{
+  width: 100%;
+  position: absolute;
+  padding: 2rem 8%;
+  background-color: #0b132b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-footer{
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.social-icons-container, .footer-menu-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+
+}
+
+.social-icon{
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background-position: center;
+  background-image: url(https://i.pinimg.com/originals/51/02/56/51025628ee346cacef62483116101d3b.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  margin: 1rem;
+}
+
+.social.icon:hover{
+  background-color: black;
+  filter: invert(1);
+}
+
+.social-icon:nth-of-type(2){
+  background-image :url(https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-social-platform-icon-png-image_6315976.png) ;
+}
+
+.social-icon:nth-of-type(3){
+  background-image :url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.pngtree.com%2Fso%2Fwhatsapp&psig=AOvVaw2jb6P1en28qpcqWKm-fKNv&ust=1708667224013000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMisrMmfvoQDFQAAAAAdAAAAABAS) ;
+
+}
+
+
+.footer-menu-container{
+  list-style-type: none;
+  color: white;
+  font-size: 18px;
+}
+
+.menu-item{
+  margin: 1rem 1.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.menu-item:hover{
+  opacity: 1;
+}
+
+.copyright{
+  color: white;
+  opacity: 0.3;
+  text-align: center;
+}
+
+.container-items{
+  display: grid;
+  grid-auto-columns: repeat(3,1fr);
+  gap: 20px;
+  margin: 20px;
+  
+}
+
+/*.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .nav__logo-container {
+    margin-right: 100px; Esto mueve el contenedor del logo hacia la izquierda 
+    margin-left: 90px; Puedes ajustar este valor según sea necesario 
+  }
+  
+  .nav__list {
+    margin: 0 10px; Ajusta el margen según sea necesario 
+    border:#212529;
+    border-radius: 50px;
+  }
+  
+  .nav__list li {
+    display: inline;
+  }
+  
+  .nav__list li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  }
+  
+  .nav__list li a:hover {
+  background-color: #e00a0ac2;
+  color: #fff;
+   
+  }
+
+  nav ul li a {
+  padding: 5px 10px;
+  border: 2.5px solid black; color del borde
+  border-radius: 5px;
+}
+
+*/
+
+/*.hero {
+  padding: 10px;
+  max-width: 1400px; Ajusta el ancho máximo según tus preferencias 
+  margin: 0 auto; Centra el elemento horizontalmente 
+  border:#212529 2.5px solid ;
+  border-radius: 50px;
+  margin-top: 20px;
+  background-color: #333; Fondo negro   
+} 
+
+*/
+
+@media only screen and (max-width:600px) {
+
+  nav ul header{
+    display: none;
+  }
+
+}
+
+

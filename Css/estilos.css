@@ -6,9 +6,11 @@
   font-family: "Open Sans", sans-serif;
   transition: 0.5s  ;
 
-
-
   
+}
+
+button {
+  border-radius: 15px;
 }
 
 h2{
@@ -56,8 +58,8 @@ h2{
 .item{
   border-radius: 10px;
   background-color:  #0000802a;;
-  
-  
+
+
 }
 
 
@@ -178,19 +180,26 @@ h2{
   transition: .3s linear;
 }
 
+
 .navegacion ul li a:hover{
   color: rgba(255, 0, 0, 0.664);
   transform: scale(1.1);
+  
 }
 
 .navegacion ul li:hover .hijos{
   display: block;
+  border-radius: 15px;
+  
+  
 }
-.navegacion .submenu .hijos{
+.navegacion .submenu .hijos {
   display: none;
   background: #0b132b;
   position: absolute;
-  width: 100%;
+  width: 105%;
+  
+  
 }
 .navegacion .submenu .hijos li{
   display: block;
@@ -200,6 +209,8 @@ h2{
 
 .navegacion .submenu .hijos li a{
   display: block;
+  font-size:x-small;
+  
   
 }
 
@@ -209,20 +220,20 @@ h2{
     to bottom right, #403f44, #1e1b32
   );*/
 
-.img-card{
-  display: flex;
-  margin: 0 auto; /* Centra el elemento horizontalmente */
-  border:#212529 solid;
-  border-radius: 50px;
-  max-width: 100%;
-  transform: scale(1.0);
-  overflow: hidden;/* OCulta el contendio que sale de la caja */
-  transition: all .5s;
-  object-fit: cover;/*cubre todo el contenedor para que la img no se desbore*/
-  transition: all .5s;
-  
- 
-}
+  .img-card{
+    display: flex;
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+    border:#212529 solid;
+    border-radius: 50px;
+    max-width: 100%;
+    transform: scale(1.0);
+    overflow: hidden;/* OCulta el contendio que sale de la caja */
+    transition: all .5s;
+    object-fit: cover;/*cubre todo el contenedor para que la img no se desbore*/
+    transition: all .5s;
+    
+   
+  }
 
 .a-card{
   background-color: #212529;
@@ -387,6 +398,7 @@ footer{
 .logo-footer{
   width: 80px;
   margin-bottom: 1rem;
+  border-radius: 15px;
 }
 
 .social-icons-container, .footer-menu-container{

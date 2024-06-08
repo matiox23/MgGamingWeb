@@ -3,12 +3,31 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
   transition: 0.5s  ;
+}
 
 
-
+.prueba {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   
+}
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.h2-productos {
+  
+  color: white;
+}
+
+
+
+button {
+  border-radius: 15px;
 }
 
 h2{
@@ -34,30 +53,69 @@ h2{
   --rhino-800: #303f5a;
   --rhino-900: #2c374e;
   --rhino-950: #1e2533;
+
+}
+
+
+
+.container-card {
+  margin-left: 410px;
+  display: grid;
+  max-width: 1100px;
+  width: 100%;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 auto;
   
 
-  }
+
+}
+
+.card-contenido {
+  width: calc(100% - 30px); /* Ajusta el ancho para incluir el margen */
+  margin: 15px;
+  border-radius: 10px;
+  border: 1px solid black; /* Especifica el grosor del borde */
+  background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  cursor: default;
+  transition: all 400ms ease;
+  display: flex; /* Asegura que el contenido interno se alinee adecuadamente */
+  justify-content: center; /* Centra el contenido */
+  align-items: center; /* Centra el contenido verticalmente */
+  overflow: hidden; /* Oculta cualquier contenido que desborde */
+}
+
+.card:hover {
+  box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.4);
+}
+
 
 
 .div-sub{
-  
-  display: grid;
+  display: flex;
   background-color:  #0000802a;;
-  place-items: center;
-  justify-content: center;
   border-radius: 10px;
   border: solid black;
-  width: 50%;
-  margin: 0 auto;  
+  width: 20%;
+  justify-content: center;
+  align-items: center;
   margin-top: 15px;
+  padding: 5px;
+  margin: auto;
+  text-align: center;
  
 }
 
 .item{
   border-radius: 10px;
   background-color:  #0000802a;;
-  
-  
+  width: 75%;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: auto;
+
 }
 
 
@@ -79,6 +137,18 @@ h2{
   transform: scale(1.2);
 }
 
+
+/*
+h3 {
+  color: whitesmoke;
+  font-weight: 50;
+  text-align: center;
+}
+*/
+
+.h3-productos {
+  color: whitesmoke;
+}
 .container-items{
   
   display: grid;
@@ -92,10 +162,15 @@ h2{
 .info-producto{
   padding: 15px 30px;
   line-height: 2;/*Internileado*/
-  display: flex;
   flex-direction: column;
   gap: 10px;
-
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;          /* Habilita Flexbox */
+  justify-content: center;/* Centra horizontalmente */
+  align-items: center;    /* Centra verticalmente */
+ 
 }
 
 .price{
@@ -105,31 +180,32 @@ h2{
 }
 
 .info-producto button{
-  border: none;
-  background: none;
-  background-color: black;
+  background-color:#E74C3C;
   color: white;
   padding: 15px 10px;
   cursor: pointer;
+  align-items: center;
 
 }
 
+
 .item img {
   
-  /*width: 100%;*/
+  width: 100%;
   object-fit: cover;/*cubre todo el contenedor para que la img no se desbore*/
   border-radius: 10px 10px 0 0;
   transition: all .5s;
  
 }
+p{
+  margin: 5px;
+  text-align: justify;
+}
 
 .p-c{
   color: #ffffff;
-  text-align: center;
   font-size: large;
-  display: flex;
   text-align: justify;
-
   
 }
 
@@ -139,7 +215,9 @@ h2{
 }
 
 .logo img {
- width: 4rem;
+    width: 70px;
+    margin-bottom: 1rem;
+    border-radius: 15px;
 }
 .logo img:hover{
   transform: scale(1.1);
@@ -178,19 +256,26 @@ h2{
   transition: .3s linear;
 }
 
-.navegacion ul li a:hover{
+
+/*.navegacion ul li a:hover{
   color: rgba(255, 0, 0, 0.664);
   transform: scale(1.1);
-}
+  
+}*/
 
 .navegacion ul li:hover .hijos{
   display: block;
+  border-radius: 15px;
+  
+  
 }
-.navegacion .submenu .hijos{
+.navegacion .submenu .hijos {
   display: none;
   background: #0b132b;
   position: absolute;
-  width: 100%;
+  width: 105%;
+  
+  
 }
 .navegacion .submenu .hijos li{
   display: block;
@@ -200,8 +285,39 @@ h2{
 
 .navegacion .submenu .hijos li a{
   display: block;
+  font-size:x-small;
+  
   
 }
+
+.imagen-con-fondo-transparente {
+  background-image: url('file:///C:/Users/USUARIO/Downloads/calidad-2.png');
+  background-color: transparent; /* Hace que el fondo del contenedor sea transparente */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* Ajusta el tamaño de la imagen según el contenedor */
+}
+
+
+.carusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+
+.carusel-2 {
+  width: 25%;
+ 
+}
+
+.a-index{
+
+  text-decoration: none;
+}
+
+
 
 
 /*body{
@@ -209,20 +325,21 @@ h2{
     to bottom right, #403f44, #1e1b32
   );*/
 
-.img-card{
-  display: flex;
-  margin: 0 auto; /* Centra el elemento horizontalmente */
-  border:#212529 solid;
-  border-radius: 50px;
-  max-width: 100%;
-  transform: scale(1.0);
-  overflow: hidden;/* OCulta el contendio que sale de la caja */
-  transition: all .5s;
-  object-fit: cover;/*cubre todo el contenedor para que la img no se desbore*/
-  transition: all .5s;
+  .img-card{
+    display: flex;
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+    border:#212529 solid;
+    border-radius: 50px;
+    max-width: 100%;
+    transform: scale(1.0);
+    overflow: hidden;/* OCulta el contendio que sale de la caja */
+    transition: all .5s;
+    object-fit: cover;/*cubre todo el contenedor para que la img no se desbore*/
+    transition: all .5s;
+   
+  }
+
   
- 
-}
 
 .a-card{
   background-color: #212529;
@@ -274,6 +391,24 @@ img {
 
 }
 
+.btn-productos {
+  width: 35%;
+  background: wheat;
+  justify-content: center;
+}
+
+.h4-productos{
+  color: white ;
+}
+
+
+
+.h4-c {
+  color: whitesmoke;
+  text-transform: uppercase;
+  
+}
+
 
 .cards{
  width: 300px;
@@ -284,7 +419,21 @@ img {
  flex-basis: 200;
  margin-bottom: 90PX;
  transition: all .5s;
- 
+
+}
+
+ .h4-info{
+  width: 250px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  align-items: center;
+  margin: 0 150px;
+  color: whitesmoke;
+  font-size: 15px;
+  cursor: default;
+  
 
 }
 
@@ -293,6 +442,7 @@ img:hover{
   transform: scale(1.1);
   
 }
+
 section {
   display: flex;
   width: 800px;
@@ -323,14 +473,19 @@ section img:hover {
 
 }
 
-header{
-
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 90px;
+  height: 90px; /* Altura de tu barra de menú */
   display: flex;
   justify-content: space-between;
-  background-color: var(--rhino-900)
-    
+  align-items: center; /* Alinea los elementos dentro del header verticalmente */
+  background-color: #E74C3C; /* Color de fondo de tu barra de menú */
+  z-index: 1000; /* Asegura que la barra de menú esté por encima de otros elementos */
+  padding: 0 20px; /* Espacio a los lados dentro del header */
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
 }
 
 .carrusel{
@@ -358,26 +513,34 @@ header{
     display: flex;
     align-items: center;
 }
+.body-fondo{
+  background-color: #000000;
+}
 
 body {
-    margin: 0;
-    font-family: 'Archivo', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #3a506b;
-    width: 100%;
-    position: absolute;
+  margin: 0;
+  font-family: 'Archivo', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  width: 100%;
+  position: relative; /* Cambiado a relativo para evitar que la posición fija cause problemas */
+  padding-top: 90px; /* Ajusta según la altura de tu barra de menú */
+}
 
+.footer-enlances{
+  margin: 1rem 1.5rem;
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 footer{
   width: 100%;
   position: absolute;
   padding: 2rem 8%;
-  background-color: #0b132b;
+  background-color: #E74C3C;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,6 +550,7 @@ footer{
 .logo-footer{
   width: 80px;
   margin-bottom: 1rem;
+  border-radius: 15px;
 }
 
 .social-icons-container, .footer-menu-container{
@@ -405,10 +569,22 @@ footer{
   border: 1px solid white;
   background-position: center;
   background-image: url(https://i.pinimg.com/originals/51/02/56/51025628ee346cacef62483116101d3b.png);
+  background-color: rgba(255, 255, 255, 0.932);
   background-size: 40%;
   background-repeat: no-repeat;
   margin: 1rem;
 }
+
+/*.social-iconoFB {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  margin: 1rem;
+}*/
 
 .social.icon:hover{
   background-color: black;
@@ -420,9 +596,11 @@ footer{
 }
 
 .social-icon:nth-of-type(3){
-  background-image :url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.pngtree.com%2Fso%2Fwhatsapp&psig=AOvVaw2jb6P1en28qpcqWKm-fKNv&ust=1708667224013000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMisrMmfvoQDFQAAAAAdAAAAABAS) ;
+  background-image :url(https://cdn.iconscout.com/icon/premium/png-256-thumb/facebook-2752192-2285009.png?f=webp) ;
 
 }
+
+
 
 
 .footer-menu-container{
@@ -449,7 +627,7 @@ footer{
 
 .container-items{
   display: grid;
-  grid-auto-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 20px;
   margin: 20px;
   
@@ -509,6 +687,85 @@ footer{
 
 */
 
+/* Estilos de la ventana emergente */
+.ventana-emergente {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.contenido-ventana {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#formularioContacto label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#formularioContacto input[type="text"],
+#formularioContacto input[type="email"],
+#formularioContacto input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#formularioContacto button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#formularioContacto button:hover {
+  background-color: #45a049;
+}
+
+.cancelar {
+  background-color: #ff0000;
+}
+
+.cancelar:hover {
+  background-color: #cc0000;
+}
+
+
+
+
 @media only screen and (max-width:600px) {
 
   nav ul header{
@@ -517,4 +774,96 @@ footer{
 
 }
 
+@media (min-width:100px) {
+  .container {
+    width: 750px;
+  }
+}
 
+@media (max-width: 768px) {
+  .container-items {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en dispositivos más pequeños */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-items {
+    grid-template-columns: 1fr; /* Cambia a 1 columna en dispositivos muy pequeños */
+  }
+}
+
+@media (max-width: 768px) {
+  .navegacion {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navegacion ul {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+  }
+
+  .navegacion ul li {
+    width: 100%; /* Extiende los enlaces a todo el ancho */
+  }
+
+  .navegacion ul li.submenu ul {
+    position: static; /* Evita que el menú desplegable se posicione de manera absoluta */
+  }
+
+  .navegacion ul li.submenu:hover ul {
+    display: none;
+  }
+
+  .navegacion ul li.submenu ul.hijos {
+    display: none;
+  }
+
+  .navegacion ul li.submenu.active ul.hijos {
+    display: block; /* Muestra el menú al tocar el elemento en dispositivos táctiles */
+  }
+}
+
+/* Toggle para mostrar y ocultar el menú en móviles */
+.header-toggle {
+  display: none; /* Ocultar por defecto */
+}
+
+@media (max-width: 768px) {
+  .header-toggle {
+    display: block; /* Mostrar el botón en dispositivos móviles */
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-contenido {
+    margin: 10px; /* Reduce el margen para dispositivos más pequeños */
+    width: calc(100% - 20px); /* Ajusta el ancho según el nuevo margen */
+  }
+}
+
+/* Ajustes responsivos para teléfonos móviles */
+@media (max-width: 480px) {
+  .card-contenido {
+    margin: 5px; /* Margen aún menor para pantallas muy pequeñas */
+    width: calc(100% - 10px); /* Ajusta el ancho para maximizar el uso del espacio */
+    flex-direction: column; /* Cambia la dirección del flex si es necesario para el contenido interno */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 60px; /* Altura más pequeña para dispositivos móviles */
+    padding: 0 10px; /* Menos padding en los lados */
+  }
+}
+
+/* Media query para dispositivos con pantalla de hasta 480px de ancho */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column; /* Cambia la disposición de los elementos a vertical */
+    height: auto; /* Altura automática según el contenido */
+    padding: 10px; /* Aumenta el padding para mejor manejo táctil */
+  }
+}

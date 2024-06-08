@@ -473,7 +473,7 @@ section img:hover {
 
 }
 
-header{
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -481,9 +481,11 @@ header{
   height: 90px; /* Altura de tu barra de menú */
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Alinea los elementos dentro del header verticalmente */
   background-color: #E74C3C; /* Color de fondo de tu barra de menú */
   z-index: 1000; /* Asegura que la barra de menú esté por encima de otros elementos */
-    
+  padding: 0 20px; /* Espacio a los lados dentro del header */
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
 }
 
 .carrusel{
@@ -847,5 +849,21 @@ footer{
     margin: 5px; /* Margen aún menor para pantallas muy pequeñas */
     width: calc(100% - 10px); /* Ajusta el ancho para maximizar el uso del espacio */
     flex-direction: column; /* Cambia la dirección del flex si es necesario para el contenido interno */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 60px; /* Altura más pequeña para dispositivos móviles */
+    padding: 0 10px; /* Menos padding en los lados */
+  }
+}
+
+/* Media query para dispositivos con pantalla de hasta 480px de ancho */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column; /* Cambia la disposición de los elementos a vertical */
+    height: auto; /* Altura automática según el contenido */
+    padding: 10px; /* Aumenta el padding para mejor manejo táctil */
   }
 }
